@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../fotos/fondo-reg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 590px;
+}
+.espacio{
+    padding-bottom: 80px;
+    color: transparent;
+}
+
+.registro-formulario {
+    padding-top: 80px;
+    background: #ffffff9d;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    height: 420px;
+    margin: 50px auto;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.registro-formulario h1 {
+    margin-bottom: 20px;
+}
+
+.registro-formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registro-formulario input[type="number"],
+.registro-formulario input[type="text"],
+.registro-formulario input[type="email"],
+.registro-formulario input[type="password"] {
+    font-family: 'Fredoka', sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.registro-formulario button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #fdfdfd;
+    border: none;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+
+}
+
+.registro-formulario button:hover {
+    background-color: #1a5276;
+}
+
+/* Estilos para el select */
+.registro-formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    color: #333;
+    background-position-y: 50%;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Estilos para las opciones del select */
+.registro-formulario select option {
+    background-color: #b5d3dd;
+    color: #333;
+}
+
+/* Media query para ajustar el botón de registro en pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+
+    .registro-formulario h1 {
+        font-size: 1.2em;
+    }
+
+    .registro-formulario {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .registro-formulario form {
+        margin-left: 60px;
+    }
+
+    .registro-formulario input[type="number"],
+    .registro-formulario input[type="text"],
+    .registro-formulario input[type="email"],
+    .registro-formulario input[type="password"],
+    .registro-formulario select {
+        background-image: none;
+        width: fit-content;
+        padding: 8px;
+
+    }
+
+}

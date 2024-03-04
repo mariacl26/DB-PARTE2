@@ -1,0 +1,239 @@
+body {
+    overflow-x: hidden;
+}
+
+.contenido {
+    margin-top: 80px;
+    /* Ajusta según la altura de tu encabezado */
+    background-size: cover;
+    padding: 40px;
+    color: var(--color-texto-contenido);
+    background-image: var(--imag-fondo);
+    background-attachment: fixed;
+}
+
+
+
+/* Estilos para el contenedor principal */
+.contenedor-principal {
+    grid-row: 1;
+    /* Colocar el contenedor principal en la primera fila */
+    /* tus otros estilos aquí */
+}
+
+/* Estilos para el contenedor de noticias */
+#contenedor-noticias {
+    grid-row: 2;
+    /* Colocar el contenedor de noticias en la segunda fila */
+    /* tus otros estilos aquí */
+}
+
+h1 {
+    font-style: italic;
+    margin: 25px;
+
+}
+
+p {
+    padding: 5px;
+}
+
+.justificado {
+    margin: 15px;
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.15em;
+    background-color: var(--secondario-color);
+    border-radius: 15px;
+    backdrop-filter: blur(3px) grayscale(100%);
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--boton-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.btn:hover {
+    background-color: var(--boton-hover-color);
+}
+
+
+.contenedor-principal {
+    margin: 15px;
+    padding: 15px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Estilos para el contenedor de noticias */
+#contenedor-noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+/* Estilos para cada noticia */
+.noticia {
+    flex: 1 0 21%;
+    /* Esto hará que las noticias sean responsivas. Cambia el valor según tus necesidades. */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+/* Efecto de sombra al pasar el mouse sobre una noticia */
+.noticia:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la imagen de la noticia */
+.noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Estilos para el título de la noticia */
+.noticia h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 16px;
+}
+
+/* Estilos para el cuerpo de la noticia */
+.noticia p {
+    font-size: 16px;
+    color: #666;
+    margin: 16px;
+}
+
+/* Estilos para el enlace de la noticia */
+.noticia a {
+    display: inline-block;
+    color: #fff;
+    background-color: #f60;
+    padding: 10px 20px;
+    margin: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Cambia el color de fondo al pasar el mouse sobre el enlace de la noticia */
+.noticia a:hover {
+    background-color: #e55d00;
+}
+
+/**/
+/* Estilos para el título de la sección de noticias */
+#titulo-noticias {
+    text-align: center;
+    font-size: 2em;
+    color: #fafafa;
+    margin-top: 50px;
+    /* Agregar animación para simular un letrero LED */
+    text-shadow: 0 0 5px #d88f22, 0 0 10px #d88f22, 0 0 15px #d88f22, 0 0 20px #d88f22;
+    animation: iluminar 1s linear infinite;
+}
+
+/* Definir la animación para simular un letrero LED */
+@keyframes iluminar {
+    0% {
+        text-shadow: 0 0 5px #d88f22, 0 0 10px #d88f22, 0 0 15px #d88f22, 0 0 20px #d88f22;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #d88f22, 0 0 20px #d88f22, 0 0 30px #d88f22, 0 0 40px #d88f22;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #d88f22, 0 0 10px #d88f22, 0 0 15px #d88f22, 0 0 20px #d88f22;
+    }
+}
+
+/* Cambiar la animación al pasar el mouse sobre el título */
+#titulo-noticias:hover {
+    animation: iluminar 0.5s linear infinite;
+}
+
+/***/
+
+/* Estilos para las transiciones suaves de las noticias */
+.noticia {
+    /* tus otros estilos aquí */
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.7s, transform 0.7s;
+    /* Reducir la duración de la transición a 0.5s */
+}
+
+.noticia.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Estilos para las noticias en pantallas pequeñas */
+@media (max-width: 600px) {
+    .noticia {
+        flex: 1 0 100%;
+        /* Hacer que las noticias ocupen todo el ancho en pantallas pequeñas */
+    }
+}
+
+/* Estilos para las noticias en pantallas medianas */
+@media (min-width: 601px) and (max-width: 900px) {
+    .noticia {
+        flex: 1 0 48%;
+        /* Hacer que las noticias ocupen aproximadamente la mitad del ancho en pantallas medianas */
+    }
+}
+
+/* Estilos para las noticias en pantallas grandes */
+@media (min-width: 901px) {
+    .noticia {
+        flex: 1 0 30%;
+        /* Hacer que las noticias ocupen aproximadamente un tercio del ancho en pantallas grandes */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contenido {
+        padding: 20px;
+        /* Ajustar el padding del contenido para pantallas más pequeñas */
+        height: auto;
+        /* Cambiar la altura del contenido para permitir scroll en pantallas más pequeñas */
+        font-size: 14px;
+    }
+
+    .btn {
+        margin-top: 1px;
+    }
+
+    h1,
+    h3 {
+        color: #45b9e7;
+    }
+
+    /* .contenedor-principal{
+        padding-bottom: 29vh;
+    } */
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - DiabetesLearning</title>
+    <link rel="stylesheet" href="./estilos/noticias.css">
+    <link rel="stylesheet" href="./estilos/variables.css">
+    <link rel="stylesheet" href="./estilos/general.css">
+    <link rel="stylesheet" href="./estilos/estilo-registro.css">
+
+    <link rel="icon" href="./fotos/analisis.svg" type="image/x-icon">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./fotos/analisis.svg" width="30" height="30" viewBox="0 0 24 24" alt="Logo de DiabetesLearning">
+            <a href="./indice.html">DiabetesLearning</a>
+        </div>
+
+        <nav>
+            <ul class="opciones">
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./indice.html">Inicio</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./noticias.html">Noticias</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./cursos.html">Cursos</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./sobre-nosotros.html">Sobre nosotros</a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="celda">
+                        <div class="velo"></div>
+                        <div class="info"><a href="./JUEGOv2.0/bienvenida.html">Juego</a></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="barras-menu">
+            <div class="barra1"></div>
+            <div class="barra2"></div>
+            <div class="barra3"></div>
+        </div>
+
+
+    </header>
+
+    <div class="menu-desplegable">
+        <div class="cerrar-menu">Cerrar</div>
+        <div class="contenido-menu">
+            <a href="./indice.html">DiabetesLearning</a>
+            <a href="./noticias.html">Noticias</a>
+            <a href="./cursos.html">Cursos</a>
+            <a href="./sobre-nosotros.html">Sobre nosotros</a>
+            <a href="./JUEGOv2.0/bienvenida.html">Juego</a>
+            <a href="./politica-privacidad.html">Política de Privacidad</a>
+            <a href="./terminos-cond.html">Términos y Condiciones</a>
+            
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="fondo">
+        <main>
+            <div class="espacio">.</div>
+            <div class="registro-formulario">
+                <h1>Registrarse en DiabetesLearning</h1>
+                <form id="registroForm">
+
+                    <select id="tipoDiabetes" required>
+                        <option value="" disabled selected>Selecciona un tipo de diabetes</option>
+                        <option value="Tipo 1">Tipo 1</option>
+                        <option value="Tipo 2">Tipo 2</option>
+                        <option value="Gestacional">Gestacional</option>
+                        <option value="Ninguna">Ninguna, solo quiero formarme</option>
+                    </select>
+                    <input type="text" id="nombreCompleto" placeholder="Nombre completo" required>
+                    <input type="text" id="dni" placeholder="DNI/NIF" required>
+                    <input type="email" id="correoElectronico" placeholder="Correo electrónico" required>
+                    <input type="password" id="contrasena" placeholder="Contraseña" required>
+                    <button type="submit" id="btnRegistro">Registrarse</button>
+                </form>
+                <p id="mensajeRegistro" style="display: none;">¡Registro exitoso!</p>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-seccion">
+            <h3>Acerca de Nosotros</h3>
+            <p>Descubre nuestra misión y visión en DiabetesLearning. Conoce al equipo que trabaja para brindarte
+                información relevante y útil sobre el manejo de la diabetes.</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Contáctanos</h3>
+            <p>¿Tienes preguntas o comentarios? ¡No dudes en contactarnos! Estamos aquí para ayudarte en tu viaje
+                hacia un mejor control de la diabetes.</p>
+            <p> +34 658 23 15 42 </p>
+            <p> diabeteslearning@gmail.com</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="./politica-privacidad.html">Política de Privacidad</a></li>
+                <li><a href="./terminos-cond.html">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+<script src="./javascript/registro-conex-back.js"></script>
+<script src="./javascript/menu-lateral.js"></script>
+
+
+</html>

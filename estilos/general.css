@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-primaria);
+
+    background-color: var(--color-primario);
+
+}
+
+.contenedor {
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 97vw;
+    z-index: 999;
+
+}
+
+
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-texto-primario);
+    padding: 10px;
+}
+
+
+.celda {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-borde-primario);
+
+}
+
+.velo {
+    width: 100%;
+    height: 100%;
+    background-color: var(--hover-secondario-color);
+    border: 3px solid var(--color-borde-primario);
+    position: absolute;
+    top: 100%;
+    transition: top 0.3s ease;
+}
+
+.celda:hover .velo {
+    top: 0;
+}
+
+.info {
+    position: relative;
+    color: black;
+    transition: color .3s ease;
+}
+
+
+.info,
+.info a {
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s ease-in;
+    position: relative;
+
+}
+
+.celda :hover {
+    cursor: pointer;
+}
+
+.celda :hover .info,
+.celda:hover .info a {
+    color: var(--color-primario);
+
+}
+
+
+
+/*FOOTER*/
+.footer {
+    background-color: var(--color-texto-primario);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-seccion {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-seccion h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--color-texto-contenido);
+}
+
+.footer-seccion p {
+    color: #a4a3a3;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.footer-seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-seccion ul li {
+    margin-bottom: 8px;
+}
+
+.footer-seccion ul li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--hover-secondario-color);
+    transition: color 0.3s ease;
+}
+
+.footer-seccion ul li a:hover {
+    color: var(--boton-color);
+}
+
+/*estilos para el menú desplegable */
+.cursos-titulo {
+    color: #fff;
+    text-align: center;
+    font-size: 2.1em;
+    padding: 20px 0;
+    background-color: var(--color-borde-primario);
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+}
+
+
+/*estilos para el menú desplegable */
+.menu-desplegable {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: var(--color-texto-primario);
+    transition: right 0.5s ease;
+    z-index: 999;
+}
+
+/*contenido*/
+.contenido-menu {
+
+    display: flex;
+    flex-direction: column;
+    /* Mostrar los cursos en columna */
+    padding: 20px;
+}
+
+.contenido-menu a {
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #efe2e2;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.contenido-menu a:hover {
+    color: #b92929;
+}
+
+/*estilos para los enlaces del menú */
+
+.menu-desplegable.mostrar {
+    right: 0;
+    pointer-events: auto;
+}
+
+/*estilos para las barras del menú */
+.barras-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    cursor: pointer;
+}
+
+.barra1,
+.barra2,
+.barra3 {
+    margin: 5px;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--color-borde-primario);
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Estilos para el botón de cerrar */
+.cerrar-menu {
+    text-align: center;
+    padding: 10px;
+    background-color: #761a1a;
+    color: var(--color-texto-contenido);
+    cursor: pointer;
+    border-bottom: 1px dashed var(--color-texto-contenido);
+
+}
+
+.cerrar-menu:hover {
+    background-color: #b92929;
+}
+
+/* Estilos para la capa semitransparente */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* Agrega esta consulta de medios al final de tu CSS para manejar pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        height: 50px;
+        width: 95vw;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+        /* Agrega un poco de margen para un mejor espaciado */
+    }
+
+    nav {
+        display: none;
+        /* Oculta los enlaces de navegación por defecto */
+
+    }
+
+    /* Oculta los enlaces del pie de página en pantallas pequeñas */
+    .footer-seccion ul li {
+        display: none;
+    }
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px, como tablets y móviles */
+@media screen and (max-width: 768px) {
+
+
+    .contenedor-principal {
+        width: 90%;
+        /* Reducir el ancho del contenedor principal en pantallas más pequeñas */
+    }
+
+
+    .menu-desplegable {
+        width: 40%;
+        /* Ajusta el ancho para pantallas pequeñas */
+    }
+
+    .contenido-menu a {
+        padding-bottom: 50px;
+
+    }
+
+    /* Muestra el botón de menú y oculta las barras cuando la pantalla es pequeña */
+    .barras-menu {
+        display: block;
+    }
+
+    .barra1,
+    .barra2,
+    .barra3 {
+
+        margin: 5px;
+    }
+
+    .menu-desplegable {
+        position: fixed;
+        top: 0;
+        right: -400%;
+        width: 300px;
+        height: 100%;
+        background-color: var(--color-texto-primario);
+        transition: right 0.5s ease;
+        z-index: 999;
+    }
+
+    /*contenido*/
+    .contenido-menu {
+        display: flex;
+        flex-direction: column;
+        /* Mostrar los cursos en columna */
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    body {
+        overflow: visible;
+    }
+}
+
+/* Media query para pantallas más pequeñas, por ejemplo, dispositivos móviles */
+@media screen and (max-width: 768px) {
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-seccion {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-seccion ul li {
+        margin-bottom: 5px;
+    }
+
+    .info a {
+        font-size: 0.9em;
+    }
+}
